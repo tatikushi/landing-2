@@ -89,6 +89,7 @@ ol {
     right: 1.2rem;
     font-size: 1.6rem;
 }
+
 .nav-list {
     display: flex;
     padding-left: 0;
@@ -122,7 +123,6 @@ ol {
 .nav-item:last-child > a:after {
     display: none;
 }
-
 
 .button {
     display: inline-block;
@@ -667,35 +667,44 @@ ol {
         padding: 50px 0 50px 0;
     }
 }
-@media  (max-width: 750px) {
+
+@media (max-width: 750px) {
     .logo {
         margin-left: 10px;
     }
+
     .navbar__link-toggle {
         display: block;
         cursor: pointer;
     }
+
     .header__button {
         margin: 0 auto;
     }
+
     .nav {
         width: 100%;
     }
+
     .nav-list {
         display: none;
     }
+
     .nav-item {
         text-align: center;
         margin: 15px auto;
     }
+
     .nav__link:after {
         display: none;
     }
+
     .active {
         display: block;
     }
 
 }
+
 @media (max-width: 665px) {
     html {
         font-size: 14px;
