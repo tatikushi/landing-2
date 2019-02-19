@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="normilize.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
@@ -37,29 +36,31 @@
                 <img src="image/logo.png" alt="" class="logo__picture">
             </div>
             <nav class="nav">
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="" class="nav__link">Home</a></li>
-                    <li class="nav-item"><a href="" class="nav__link">About Ua</a></li>
-                    <li class="nav-item"><a href="" class="nav__link">Our Approach</a></li>
-                    <li class="nav-item"><a href="" class="nav__link">Our Work</a></li>
+                <div class="navbar__link navbar__link-toggle" id="js-navbar-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-list" id="js-menu">
+                    <li class="nav-item"><a href="#home" class="nav__link">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav__link">About Us</a></li>
+                    <li class="nav-item"><a href="#approach" class="nav__link">Our Approach</a></li>
+                    <li class="nav-item"><a href="#work" class="nav__link">Our Work</a></li>
                 </ul>
             </nav>
             <a href="" class="button header__button button--red">Free Consultation</a>
         </div>
     </div>
 </header>
-<section class="hero">
+<section id="home" class="hero">
     <p class="hero_about">We Providing</p>
     <h1 class="hero__title">Social Media marketing for businesses</h1>
     <a href="" class="button button--yellow button--text-uppercase">Free consultant</a>
 </section>
-<section class="about">
+<section id="about" class="about">
     <div class="container">
         <div class="title title--with-bottom-line">
-            <h2 class="title title__header">About us</h2>
+            <h2 class="title title__header">About Us</h2>
             <p class="title__text">We are added our major Services</p>
         </div>
-
         <ul class="about__list">
             <li class="about__item">
                 <img src="image/icons/like.png" class="icon icon-like" alt="">
@@ -85,10 +86,10 @@
         </ul>
     </div>
 </section>
-<section class="approach">
+<section id="approach" class="approach">
     <div class="container">
         <div class="title title--with-bottom-line">
-            <h2 class="title title__header">Our Approach</h2>
+            <h2 class="title__header">Our Approach</h2>
             <p class="title__text">Check Our approches step by step ( how we do it )</p>
         </div>
         <ul class="approach__list">
@@ -147,7 +148,7 @@
         </ul>
     </div>
 </section>
-<section class="work">
+<section id="work" class="work">
     <div class="container">
         <div class="title title--with-bottom-line">
             <h2 class="title title__header">Our Work</h2>
@@ -191,15 +192,15 @@
 <section class="form-section">
     <div class="container">
         <div class="title">
-            <h2 class="title title__header">Get Your Free Facebook Analysis Now</h2>
+            <h2 class="title__header">Get Your Free Facebook Analysis Now</h2>
             <p class="title__text">Enter your details below</p>
         </div>
         <div class="btn-down">
-            <a href="" class="arrow-down">
+            <a href="form.html" target="_blank" class="arrow-down">
                 <i class="fas fa-angle-down"></i>
             </a>
         </div>
-        <div class="form-container">
+        <div class="form-container is-hidden">
             <form class="form" action="#" method="post">
                 <button type="button" class="form__close-button">×</button>
                 <div class="form__text">
@@ -209,7 +210,9 @@
                 </div>
                 <div class="form__fields">
                     <input type="text" class="form__input" placeholder="Your Name">
-                    <input type="number" class="form__input" placeholder="Contact Number">
+                    <input class="form__input" name="phone" required type="tel"
+                           title="Формат: (000) 000 00 00"
+                           placeholder="Contact Number" pattern="[0-9_-]{10}">
                     <input type="text" class="form__input" placeholder="Company Name">
                 </div>
                 <button type="submit" class="button button--text-uppercase button--red">Submit now</button>
@@ -245,8 +248,9 @@
         </div>
     </div>
     <div class="footer__bottom">
-        <div class="footer__copy">Cssauthor.com © 2019 </div>
+        <div class="footer__copy">Company © 2019</div>
     </div>
 </footer>
+<script src="script.js"></script>
 </body>
 </html>
